@@ -8,7 +8,7 @@ subtitle: ""
 description: ""
 keywords:
 author: zxdclyz
-language: zh-cn
+language: zh-CN
 timezone: ""
 
 # URL
@@ -101,4 +101,4 @@ deploy:
   type: ""
 
 # theme_style is default to 'light'
-theme_style: dark
+theme_style: light
