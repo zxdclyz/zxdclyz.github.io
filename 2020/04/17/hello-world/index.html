@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="zxdclyz">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Learning Spark(2) RDD基础"/>
+  <meta property="og:title" content="Hello World"/>
   <meta property="og:description" content="" />
   <meta property="og:site_name" content="LYZ"/>
   <meta property="og:type" content="article" />
@@ -47,7 +47,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Learning Spark(2) RDD基础</p>
+          <p class="title">Hello World</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -104,42 +104,24 @@
           <!-- Date -->
           <span class="date-time info"
             >On
-            <span class="date">2020-04-10</span>
+            <span class="date">2020-04-17</span>
             <span class="time">12:23:44</span>
           </span>
-          
-          <!--  Categories  -->
-          <span class="categories info"
-            >Under 
-
-<a href="/categories/Spark/">Spark</a>
-</span
-          >
           
         </div>
         <!-- Tags -->
         
-        <div class="post-tags text-muted">
-          Tags: 
-
-<a class="tag" href="/tags/Spark/">#Spark</a> <a class="tag" href="/tags/data-science/">#data science</a>
-
-
-        </div>
-        
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>“RDD（Resilient Distributed Dataset） 是分布式的元素集合”</p>
-<a id="more"></a>
-<h2 id="RDD-基本操作"><a href="#RDD-基本操作" class="headerlink" title="RDD 基本操作"></a>RDD 基本操作</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>可以从内存或者文件创建 RDD</p>
-<ul>
-<li>用<code>SparkContext.parallelize()</code>从内存创建，详见<a href="http://spark.apache.org/docs/latest/rdd-programming-guide.html#parallelized-collections" target="_blank" rel="noopener">文档</a></li>
-<li>使用诸如<code>SparkContext.textFile()</code>方法从外部文件读取，详见<a href="http://spark.apache.org/docs/latest/rdd-programming-guide.html#external-datasets" target="_blank" rel="noopener">文档</a>，以及<a href="http://spark.apache.org/docs/latest/api/python/pyspark.html#pyspark.SparkContext" target="_blank" rel="noopener">API doc</a></li>
-</ul>
-<h3 id="转化与行动"><a href="#转化与行动" class="headerlink" title="转化与行动"></a>转化与行动</h3><p>转化操作从已有的 RDD 中生成新的 RDD，行动操作在 RDD 进行计算并返回结果</p>
-<p>详见<a href="http://spark.apache.org/docs/latest/rdd-programming-guide.html#rdd-operations" target="_blank" rel="noopener">文档</a>及<a href="http://spark.apache.org/docs/latest/api/python/pyspark.html#pyspark.RDD" target="_blank" rel="noopener">API doc</a></p>
-<h2 id="RDD-的重要性质"><a href="#RDD-的重要性质" class="headerlink" title="RDD 的重要性质"></a>RDD 的重要性质</h2><h3 id="惰性计算"><a href="#惰性计算" class="headerlink" title="惰性计算"></a>惰性计算</h3><p>Spark 对于对 RDD 的转化操作采用惰性计算的机制，即 Spark 会将你对 RDD 进行的转化操作记录下来，但并不立刻计算，只有当某个 RDD 被调用了行动操作时，Spark 才会按照记录的谱系图计算出这个 RDD，然后进行行动。值得注意的是，在每次进行行动时，Spark 都会重新计算一个 RDD</p>
-<h3 id="持久化-缓存"><a href="#持久化-缓存" class="headerlink" title="持久化(缓存)"></a>持久化(缓存)</h3><p>由于惰性计算的机制，在每次进行行动时，Spark 都会沿着谱系图重新计算一个 RDD，这在迭代去情况下会产生极大的开销，因此，我们可以通过缓存的方式来对 RDD 进行持久化，使用<code>RDD.persist()</code>来进行缓存</p>
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
  
         </div>
       </div>
