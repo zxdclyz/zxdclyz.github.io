@@ -105,7 +105,7 @@
           <span class="date-time info"
             >On
             <span class="date">2020-06-17</span>
-            <span class="time">12:46:45</span>
+            <span class="time">16:33:31</span>
           </span>
           
           <!--  Categories  -->
@@ -153,7 +153,11 @@
 <script type="math/tex; mode=display">
 S^u_{t_w}=q_iq_{i+1}\dots q_{i+k}\quad for\,1<j\leq k,t_{q_j}\in t_w\quad</script><p>即在时间窗中的子序列</p>
 </li>
-<li><p>移动预测问题（Mobility prediction）：根据目前的轨迹$S^u<em>{t</em>{w<em>m}}=q_1\dots q_n$和历史的轨迹$S^u</em>{t<em>{w_1}},S^u</em>{t<em>{w_2}}\dots S^u</em>{t<em>{w</em>{m-1}}}$来预测下一个时空点$q_{n+1}$</p>
+<li><p>移动预测问题（Mobility prediction）：根据目前的轨迹</p>
+<script type="math/tex; mode=display">
+S^u_{t_{w_m}}=q_1\dots q_n</script><p>和历史的轨迹</p>
+<script type="math/tex; mode=display">
+S^u_{t_{w_1}},S^u_{t_{w_2}}\dots S^u_{t_{w_{m-1}}}</script><p>来预测下一个时空点 $q_{n+1}$</p>
 </li>
 </ul>
 <h2 id="DeepMove-Model"><a href="#DeepMove-Model" class="headerlink" title="DeepMove Model"></a>DeepMove Model</h2><h3 id="总体思想"><a href="#总体思想" class="headerlink" title="总体思想"></a>总体思想</h3><p>针对前面提到的 model-based 方法的问题，DeepMove 做出了一些改进，其思想主要为：利用一个多模态的 emdedding 模块来将稀疏的地点、时间、用户信息编码成一个稠密的向量来表示，然后交由加入了 attention 机制的 RNN 来处理，其具体结构如图</p>
