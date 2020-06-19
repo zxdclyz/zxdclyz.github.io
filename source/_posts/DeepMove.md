@@ -45,7 +45,15 @@ mathjax: true
 
   即在时间窗中的子序列
 
-- 移动预测问题（Mobility prediction）：根据目前的轨迹$S^u_{t_{w_m}}=q_1\dots q_n$和历史的轨迹$S^u_{t_{w_1}},S^u_{t_{w_2}}\dots S^u_{t_{w_{m-1}}}$来预测下一个时空点$q_{n+1}$
+- 移动预测问题（Mobility prediction）：根据目前的轨迹
+  $$
+  S^u_{t_{w_m}}=q_1\dots q_n
+  $$
+  和历史的轨迹
+  $$
+  S^u_{t_{w_1}},S^u_{t_{w_2}}\dots S^u_{t_{w_{m-1}}}
+  $$
+  来预测下一个时空点 $q_{n+1}$
 
 ## DeepMove Model
 
